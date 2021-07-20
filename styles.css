@@ -74,6 +74,10 @@ main h1 {
 .planet, .species {
     margin: 1vh 0;
 }
+.planet img, .species img {
+    width: 90%;
+    height: auto;
+}
 .residents {
     font-weight: bold;
 }

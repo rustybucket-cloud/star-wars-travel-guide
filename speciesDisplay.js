@@ -3,16 +3,24 @@ import { species } from "./species.js";
 function displaySpecies() {
     const div = document.createElement('div');
     div.classList.add('data');
+    let id = 5;
     species.forEach( species => {
         const name = species.name;
+        const photo = `species/${id}.jpg`;
         const classification = species.classification;
         const designation = species.designation;
         const height = species.average_height;
         const homeworld = species.homeworld;
         const language = species.language;
 
+        id++;
+
         const group = document.createElement("div");
         group.classList.add("species");
+
+        const img = document.createElement('img');
+        img.setAttribute('src', photo);
+        group.append(img);
 
         const speciesName = document.createElement("h3");
         const speciesNameTxt = document.createTextNode(name);
